@@ -1,12 +1,21 @@
 #include <stdio.h>
 
-int main(int argc, char const *argv[])
+int main(int argc, char *argv[])
 {
-    FILE* file;
-    file = fopen(argv[1], "w");
-    printf("file is created %s \n",argv[1]);
-    
-    fclose(file);
-    
+    if (argc > 1)
+    {
+        FILE* file;
+        for (int i = 1; i < argc; i++)
+        {
+            file = fopen(argv[i], "w");
+            printf("File is created %s.\n", argv[i]);
+            fclose(file);
+        }
+    }
+    else
+    {
+        printf("No path specified.\n");
+    }
+
     return 0;
 }
