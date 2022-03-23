@@ -1,5 +1,11 @@
 #include <stdio.h>
 
+/*
+This code is wriiten by @Vxer09_
+visit here "https://github.com/Vxer09/betterexe"
+it works!
+*/
+
 int main(int argc, char *argv[])
 {
     if (argc > 1)
